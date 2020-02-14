@@ -1,0 +1,11 @@
+.custom-button {
+    background-color: rgb(105, 248, 105);
+    border-radius: 0.1cm;
+    border: none;
+    width: 100px;
+    min-width: 40px;
+    
+}
+.custom-button:hover {
+    background-color: rgb(21, 255, 21);
+}
