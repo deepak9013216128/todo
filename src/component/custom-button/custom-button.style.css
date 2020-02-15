@@ -4,6 +4,9 @@
     border: none;
     width: 100px;
     min-width: 40px;
+    height: 40px;
+    margin-top: auto;
+    cursor: pointer;
     
 }
 .custom-button:hover {

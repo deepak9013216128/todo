@@ -9,7 +9,8 @@
 .header {
     text-align: center;
     color: blueviolet;
-    font-size: 3.5rem;
+    font-size: 5rem;
+    margin: 0;
 }
 .form {
     display: flex;
