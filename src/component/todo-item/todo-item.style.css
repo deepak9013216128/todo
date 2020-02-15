@@ -4,9 +4,22 @@
     margin: 1% 0;
     border-radius: 0.5cm;
     box-sizing: border-box;
-
+    font-family: sans-serif;
+    font-style: oblique;
 }
 .todo-name {
-    text-align: center;
     color: darkorange;
+    cursor: pointer;
+    
+}
+.active {
+    text-decoration: line-through;
+    color: darkgray;
+}
+.date {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: right;
+    color: thistle;
 }

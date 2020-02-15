@@ -3,6 +3,8 @@
     padding: 0 5% 5% 5%;
     background-color: aquamarine;
     border-radius: 1cm;
+    font-family: 'Bigelow Rules';
+    font-weight: 500;
 }
 .header {
     text-align: center;

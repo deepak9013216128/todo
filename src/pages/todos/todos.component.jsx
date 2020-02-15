@@ -15,13 +15,17 @@ class Todos extends React.Component{
         const {name,value} = event.target;
         this.setState({[name]: value})
     }
-    handleSubmit = (event)=>{
+    handleSubmit = async (event)=>{
         event.preventDefault();
-        const newTodo = this.state.todo;
-        if(newTodo){
-            this.setState({todos: [newTodo, ...this.state.todos]})
-        }
+        const newTodo = {
+            todo: this.state.todo,
+            date: await new Date()
+        };
+        //if(newTodo){
+        await this.setState({todos: [newTodo, ...this.state.todos]})
+        //}
         this.setState({todo: ''})
+        console.log(this.state)
     }
     render(){
         const {todos} = this.state;
@@ -41,7 +45,7 @@ class Todos extends React.Component{
                 </form>
                 <div>
                 {
-                    todos.map((todo,index) => <TodoItem key={index} todo={todo}/>)
+                    todos.map((item,index) => <TodoItem key={index} item={item}/>)
                 }
                 </div>
             </div>
