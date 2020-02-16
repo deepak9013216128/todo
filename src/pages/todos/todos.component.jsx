@@ -21,9 +21,11 @@ class Todos extends React.Component{
             todo: this.state.todo,
             date: await new Date()
         };
-        //if(newTodo){
+        if(this.state.todo){
         await this.setState({todos: [newTodo, ...this.state.todos]})
-        //}
+        }else{
+            alert("You have to write some message...")
+        }
         this.setState({todo: ''})
         console.log(this.state)
     }

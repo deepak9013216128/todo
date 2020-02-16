@@ -5,12 +5,17 @@
     border-radius: 0.5cm;
     box-sizing: border-box;
     font-family: sans-serif;
-    font-style: oblique;
+    font-style: oblique;    
+}
+.content {
+    position: relative;
+    display: flex;
 }
 .todo-name {
     color: darkorange;
     cursor: pointer;
-    
+    width: 95%;
+    margin: 0;
 }
 .active {
     text-decoration: line-through;
@@ -22,4 +27,15 @@
     font-size: 1.5rem;
     text-align: right;
     color: thistle;
+}
+.delete {
+    width: 12px;
+    color: white;
+    margin: 0;
+    background-color: red;
+    padding: 2px 2px;
+}
+
+.hidden {
+    display: none;
 }
