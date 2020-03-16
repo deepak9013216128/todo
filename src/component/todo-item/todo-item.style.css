@@ -12,10 +12,13 @@
     display: flex;
 }
 .todo-name {
-    color: darkorange;
+    color: darkblue;
     cursor: pointer;
     width: 95%;
     margin: 0;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .active {
     text-decoration: line-through;
@@ -30,9 +33,11 @@
 }
 .delete {
     width: 12px;
+    height: 18px;
     color: white;
     margin: 0;
-    background-color: red;
+    font-size: 1.5rem;
+    color: red;
     padding: 2px 2px;
 }
 

@@ -24,7 +24,7 @@ class TodoItem extends React.Component{
                     </h2>
                     <h5 className={this.state.active?'delete':'hidden'}><i className="fas fa-trash-alt"></i></h5>
                 </div>
-                <h5 className='date'>- {date.getDate()}/{date.getMonth()}/{date.getFullYear()}</h5>
+                <h5 className='date'>- {date}</h5>
             </div>
         )
     }

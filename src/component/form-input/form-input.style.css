@@ -6,6 +6,7 @@
 }
 
 input {
+    margin-top: 20px;
     outline: none;
     border: none;
     border-bottom: 1px solid black;
@@ -14,4 +15,8 @@ input {
     background-color: rgb(155, 255, 222);
     box-sizing: border-box;
     width: 100%;
+}
+input:focus {
+    height: 50px;
+    margin-top: 0px;
 }
