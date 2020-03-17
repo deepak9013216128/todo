@@ -22,7 +22,7 @@
 }
 .active {
     text-decoration: line-through;
-    color: darkgray;
+    color: gray;
 }
 .date {
     padding: 0;

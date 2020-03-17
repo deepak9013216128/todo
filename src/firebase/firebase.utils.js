@@ -16,7 +16,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export const todosList = async ()=>{
-    const todosRef = firestore.collection("todos");
+    const todosRef = await firestore.collection("todos");
     //const snapshot = await todosRef.get();
     // todosRef.onSnapshot(snapshot=>{
     //     snapshot.forEach(doc=>
@@ -30,7 +30,7 @@ export const todosList = async ()=>{
 
 export const addTodo = async (newTodo)=>{
     const todosRef = await firestore.collection("todos");
-    const snapshot = await todosRef.get();
+    // const snapshot = await todosRef.get();
     try{
         const {todo}=newTodo;
         const date = `${newTodo.date.getDate() }/${newTodo.date.getMonth()}/${newTodo.date.getFullYear()}`;
@@ -40,6 +40,31 @@ export const addTodo = async (newTodo)=>{
         })
     }catch(error){
         console.log(error);
+    }
+}
+
+export const deleteTodo = async (todo)=>{
+    const todosRef = await firestore.collection('todos');
+    try{
+        todosRef.onSnapshot(snapshot=>{
+            snapshot.forEach(doc=>{
+                //console.log(doc.id)
+                // console.log(doc.data().todo,todo,doc.data().todo===todo)
+                if(doc.data().todo === todo){
+                    todosRef.doc(doc.id).delete().then(function() {
+                        alert("Successfully deleted!");
+                    }).catch(function(error) {
+                        console.error("Error removing document: ", error);
+                    });
+                }
+            }
+
+
+            )
+        })
+        
+    }catch(error){
+        alert(error);
     }
 }
 

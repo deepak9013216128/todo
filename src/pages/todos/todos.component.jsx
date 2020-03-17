@@ -12,16 +12,20 @@ class Todos extends React.Component{
         todo : '',
         todos : []
     }
+    // fun = async()=>{
+    //     const to = await todosList();
+    //     console.log(to)
+    // }
     componentDidMount(){
         const todosRef = firestore.collection("todos");
+        // console.log(todosRef)
         todosRef.onSnapshot(snapshot=>{
             this.setState({todos: []});
             snapshot.forEach(doc=>{
-                
                 this.setState({todos:[doc.data(),...this.state.todos] })
             })
-
         })
+        // fun();
     }
     handleChange = async (event)=>{
         const {name,value} = event.target;
