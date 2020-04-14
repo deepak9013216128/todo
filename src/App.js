@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Todos from './pages/todos/todos.component';
+import TodoApp from './pages/todo-app/todo-app.component';
 
 function App() {
   return (
-    <Todos />
+    <TodoApp />
   );
 }
 
